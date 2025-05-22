@@ -1,0 +1,49 @@
+{
+  "type": "module",
+  "name": "@tbostest/ps-component",
+  "version": "0.0.21",
+  "description": "A package for ps-component.",
+  "main": "./dist/module.mjs",
+  "types": "./dist/types.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/runtime/index.mjs",
+      "require": "./dist/runtime/index.cjs"
+    },
+    "./runtime/*": "./dist/runtime/*"
+  },
+  "files": [
+    "dist",
+    "src/runtime"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "nuxt-module-build --rootDir . --entry src/module",
+    "bump-version": "npm version patch --force",
+    "prepublishOnly": "npm run bump-version && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SongKimTB/tysource.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SongKimTB/tysource/issues"
+  },
+  "homepage": "https://github.com/SongKimTB/tysource#readme",
+  "peerDependencies": {
+    "nuxt": "^3.17.4",
+    "vue": "^3.5.14"
+  },
+  "devDependencies": {
+    "@nuxt/kit": "^3.17.4",
+    "@nuxt/module-builder": "^0.5.5",
+    "typescript": "^5.8.3",
+    "vue-tsc": "^2.2.10"
+  },
+  "dependencies": {
+    "@tbostest/ps-core": "file:../ps-core/tbostest-ps-core-0.0.7.tgz"
+  }
+}
