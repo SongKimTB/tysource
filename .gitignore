@@ -1,1 +1,21 @@
 node_modules/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+# If the playground ever had its own build output (though it's for dev serving)
+playground/dist/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

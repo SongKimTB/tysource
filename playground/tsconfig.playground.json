@@ -1,0 +1,26 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".", // Set base URL for the playground
+    "paths": {
+      "@/*": ["../src/*"] // Ensure this path correctly points to your library's src
+    },
+    // `noEmit` is inherited and should be true.
+    // `isolatedModules` might need to be set to true if not inherited.
+    "isolatedModules": true,
+    "types": ["vite/client"] // Include Vite client types for the playground
+  },
+  "include": [
+    "main.ts",
+    "App.vue",
+    "vite-env.d.ts",
+    "../src/**/*.ts", // Include library source for type checking during playground dev
+    "../src/**/*.d.ts",
+    "../src/**/*.tsx",
+    "../src/**/*.vue"
+  ],
+  "exclude": [
+    "../node_modules", // Exclude node_modules from the project root
+    "../dist" // Exclude library distribution files
+  ]
+}
