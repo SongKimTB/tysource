@@ -1,0 +1,61 @@
+{
+  "name": "@tbostest/ps-core",
+  "version": "1.0.0",
+  "description": "A UI library for Nuxt 3 applications using Element Plus and Tailwind CSS.",
+  "main": "dist/ps-core.umd.js",
+  "module": "dist/ps-core.es.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    "src/assets/tailwind.css"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/ps-core.es.js",
+      "require": "./dist/ps-core.umd.js",
+      "types": "./dist/types/index.d.ts"
+    },
+    "./style.css": "./dist/style.css",
+    "./tailwind.css": "./src/assets/tailwind.css"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SongKimTB/tysource.git"
+  },
+  "keywords": [
+    "nuxt",
+    "vue",
+    "ui",
+    "element-plus",
+    "tailwind"
+  ],
+  "author": "Song Kim",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SongKimTB/tysource/issues"
+  },
+  "homepage": "https://github.com/SongKimTB/tysource#readme",
+  "peerDependencies": {
+    "nuxt": "^3.17.4",
+    "vue": "^3.5.14"
+  },
+  "dependencies": {
+    "element-plus": "^2.9.10",
+    "tailwindcss": "^4.1.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.4",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4",
+    "vue-tsc": "^2.2.10"
+  }
+}
